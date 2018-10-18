@@ -26,7 +26,7 @@ var nodes = [{ "node": 1, "message": "Do you like the ocean", "yes": 2, "no": 3 
              { "node": 7, "message": "Do you like flat land, where you can see for miles", "yes": 14, "no": 15 }, //don't like ocean, nor mountains
 
 // Answers & descriptions
-             { "node": 8, "message": "Nova Scotia and/or New Brunswick", "yes": 0, "no": 0, "description": "Nova Scotia, and New Brunswick are part of the Maritimes both on the Atlantic Ocean." },
+             { "node": 8, "message": "Nova Scotia and/or New Brunswick", "yes": 0, "no": 0, "description": "Nova Scotia, and New Brunswick are part of the Maritimes both on the Atlantic Ocean, which is Canada's east coast. Halifax is the largest city in Nova Scotia, at over 200,000 people and Moncton is New Brunswick's largest city with over 100,000 people."},
              { "node": 9, "message": "British Columbia", "yes": 0, "no": 0, "description": "British Columbia is Canada's westernmost province on the Pacific Ocean."},
              { "node": 10, "message": "Prince Edward Island", "yes": 0, "no": 0 , "description": "Prince Edward Island is part of the Maritimes on the Atlantic Ocean, smaller than Nova Scotia and New Brunswick, you can drive to it by taking the Confederation Bridge."},
              { "node": 11, "message": "Newfoundland and Labrador", "yes": 0, "no": 0 , "description": "Newfoundland and Labrador is on the Atlantic Ocean, more rustic, if you avoid the capital city of St. John's, you can't drive there, but can fly, or take a car ferry."},

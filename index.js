@@ -27,13 +27,13 @@ var nodes = [{ "node": 1, "message": "Do you like the ocean", "yes": 2, "no": 3 
 
 // Answers & descriptions
              { "node": 8, "message": "Nova Scotia and/or New Brunswick", "yes": 0, "no": 0, "description": "Nova Scotia, and New Brunswick are part of the Maritimes both on the Atlantic Ocean, which is Canada's east coast. Halifax is the largest city in Nova Scotia, at over 200,000 people and Moncton is New Brunswick's largest city with over 100,000 people."},
-             { "node": 9, "message": "British Columbia", "yes": 0, "no": 0, "description": "British Columbia is Canada's westernmost province on the Pacific Ocean."},
+             { "node": 9, "message": "British Columbia", "yes": 0, "no": 0, "description": "British Columbia is Canada's westernmost province on the Pacific Ocean, with its largest city of Vancouver with a population over 600,000 people in Metro Vancouver with almost 2.5 million people."},
              { "node": 10, "message": "Prince Edward Island", "yes": 0, "no": 0 , "description": "Prince Edward Island is part of the Maritimes on the Atlantic Ocean, smaller than Nova Scotia and New Brunswick, you can drive to it by taking the Confederation Bridge."},
              { "node": 11, "message": "Newfoundland and Labrador", "yes": 0, "no": 0 , "description": "Newfoundland and Labrador is on the Atlantic Ocean, more rustic, if you avoid the capital city of St. John's, you can't drive there, but can fly, or take a car ferry."},
              { "node": 12, "message": "Quebec", "yes": 0, "no": 0 , "description": "Quebec contains the Laurentian Mountains and will let you experience French culture within Canada."},
-             { "node": 13, "message": "Alberta", "yes": 0, "no": 0 , "description": "Alberta provides access to Jasper and Banff National Parks and the Icefields Parkway through the Rocky Mountains."},
-             { "node": 14, "message": "Manitoba and/or Saskatchewan", "yes": 0, "no": 0 , "description": "Manitoba and Saskatchewan are two Prairie provinces, that allow you to see for miles."},
-             { "node": 15, "message": "Ontario", "yes": 0, "no": 0 , "description": "Ontario, has a rugged landscape marked by the Canadian Shield and the Great Lakes and includes Canada's capital city: Ottawa."},
+             { "node": 13, "message": "Alberta", "yes": 0, "no": 0 , "description": "Alberta provides access to Jasper and Banff National Parks and the Icefields Parkway through the Rocky Mountains, but you won't find much French culture there."},
+             { "node": 14, "message": "Manitoba and/or Saskatchewan", "yes": 0, "no": 0 , "description": "Manitoba and Saskatchewan are two landlocked Prairie provinces, with few hills that allow you to see for miles."},
+             { "node": 15, "message": "Ontario", "yes": 0, "no": 0 , "description": "Ontario, has a rugged landscape marked by the Canadian Shield and the Great Lakes, but no ocean nor mountains. It includes Canada's capital city: Ottawa."},
 ];
 
 // this is used for keep track of visted nodes when we test for loops in the tree
@@ -102,16 +102,6 @@ var newSessionHandler = {
 // Called at the start of the game, picks and asks first question for the user
 var startGameHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
     'AMAZON.YesIntent': function () {
-
-        // ---------------------------------------------------------------
-        // check to see if there are any loops in the node tree - this section can be removed in production code
-        visited = [nodes.length];
-        var loopFound = helper.debugFunction_walkNode(START_NODE);
-        if( loopFound === true)
-        {
-             this.emit(':tell', loopsDetectedMessage);
-        }
-        // ---------------------------------------------------------------
 
         // set state to asking questions
         this.handler.state = states.ASKMODE;

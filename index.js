@@ -42,7 +42,7 @@ var visited;
 // These are messages that Alexa says to the user during conversation
 
 // This is the intial welcome message
-var welcomeMessage = "Welcome to which Canadian province to visit, a decision tree, are you ready to play?";
+var welcomeMessage = "Great! I'm glad you want to know which Canadian province to visit. This is a fun decision tree to help you, are you ready to play?";
 
 // This is the message that is repeated if the response to the initial welcome message is not heard
 var repeatWelcomeMessage = "Say yes to start the game or no to quit.";
